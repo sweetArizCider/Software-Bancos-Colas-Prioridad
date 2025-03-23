@@ -3,8 +3,8 @@ export const NavBar = ({titulo}) => {
     return (
         <nav>
             <h1>{titulo}</h1>
-            <a href=""><p>Turnos de espera</p></a>
-            <a href=''><p>Operaciones</p></a>
+            <a href="/banco"><p>Turnos de espera</p></a>
+            <a href='/operaciones'><p>Operaciones</p></a>
         </nav>
     )
 }
