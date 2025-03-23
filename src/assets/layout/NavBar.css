@@ -1,0 +1,32 @@
+nav{
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #F1F1F1 ;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 96px;
+    border-radius: 50px;
+    margin: 38px;
+    background-color: #03030535;
+}
+
+h1{
+    font-size: 32px;
+    font-weight: 330;
+}
+h1:hover{
+    cursor: pointer;
+    color: white;
+}
+
+
+
+p{
+    font-size: 24px;
+    font-weight: 330;
+}
+
+
+a{
+    text-decoration: none;
+}

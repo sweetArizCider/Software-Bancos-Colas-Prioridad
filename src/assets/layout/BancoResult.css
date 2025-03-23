@@ -1,0 +1,23 @@
+.banco-result-section{
+    display: flex;
+    flex-direction: row;
+    height: 90%;
+    height: 2rem;
+    margin-bottom: 33px;
+
+}
+
+.divisor-result{
+    width: 33.3%;
+    align-items: center;
+}
+.turno{
+    justify-self: center;
+    margin-right: 7px;
+}
+.cliente{
+    justify-self: center;
+}
+.estatus{
+    justify-self: center;
+}
