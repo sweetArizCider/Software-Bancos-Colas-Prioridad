@@ -1,0 +1,19 @@
+#posfija-article{
+    width: auto;
+    height: 70px;
+    background-color: #03030535 ;
+    border: 1px solid #F1F1F1;
+    border-radius: 50px;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex; 
+    flex-direction: row;
+    align-items: center;
+    gap: 24px;
+}
+
+#posfija-article label{
+    margin-left: 42px;
+    font-size: 17px;
+    font-weight: 350;
+}

@@ -1,0 +1,8 @@
+#result-operaciones-section{
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+    height: 660px;
+    margin-right: 42px;
+    gap: 42px;
+}

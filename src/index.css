@@ -16,3 +16,11 @@ body{
   flex-direction: column;
 }
 
+input{
+  font-size: 24px;
+  align-items: center;
+  text-align: center;
+}
+input::placeholder{
+    font-size: 24px;
+}
