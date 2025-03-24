@@ -13,6 +13,7 @@ export const InputOperaciones = () => {
 
         const resultadoEvaluado = PosfijaUtils.evaluarPosfija(resultadoPosfijo);
         setResultadoEvaluacion(resultadoEvaluado);
+        setOperacion('');
     };
 
     return (
