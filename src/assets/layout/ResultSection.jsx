@@ -1,8 +1,16 @@
-import './ResultSection.css'
-import { BancoResult } from './BancoResult'
+import './ResultSection.css';
+import { BancoResult } from './BancoResult';
+import { colaBanco } from '../../controllers/banco/BancoController'; 
 
-export const ResultSection = () => {
-    return(
+export const ResultSection = ({ cola, setCola }) => {
+    const handleClienteAtendido = () => {
+        const resultado = colaBanco.sacarCliente(); 
+        if (resultado) {
+            setCola(resultado.colaActual); 
+        }
+    };
+
+    return (
         <section className="result-section">
             <article className="result-article">
                 <header className='result-header'>
@@ -11,19 +19,21 @@ export const ResultSection = () => {
                     <p>Estatus</p>
                 </header>
                 <main className='result-main'>
-                    <BancoResult turno="1" cliente="Carlos Arizpe" estatus="P1"/>
-        
-                    <BancoResult turno="1" cliente="Carlos Arizpe" estatus="P1"/>
-                    <BancoResult turno="1" cliente="Carlos Arizpe" estatus="P1"/>
-                    <BancoResult turno="1" cliente="Carlos Arizpe" estatus="P1"/>
-                    <BancoResult turno="1" cliente="Carlos Arizpe" estatus="P1"/>
-                    <BancoResult turno="1" cliente="Carlos Arizpe" estatus="P1"/>
-                    <BancoResult turno="1" cliente="Carlos Arizpe" estatus="P1"/>
+                    {cola.map((cliente, index) => (
+                        <BancoResult
+                            key={index}
+                            turno={index + 1}
+                            cliente={cliente.nombre}
+                            estatus={cliente.display}
+                        />
+                    ))}
                 </main>
             </article>
             <footer className="result-footer">
-                <button id="selected">Cliente Atendido</button>
+                <button id="selected" onClick={handleClienteAtendido}>
+                    Cliente Atendido
+                </button>
             </footer>
         </section>
-    )
-}
+    );
+};
