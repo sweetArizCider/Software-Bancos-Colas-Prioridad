@@ -5,9 +5,12 @@ import { PosfijaUtils } from '../../../controllers/operaciones/PosfijaUtils.js';
 
 export const InputOperaciones = () => {
     const [operacion, setOperacion] = useState('');
+    const [resultadoInfija, setResultadoInfija] = useState(null);
     const { setResultadoPosfija, setResultadoEvaluacion } = useContext(PosfijaContext);
 
     const manejarIngreso = () => {
+        const resultado = eval(operacion); 
+        setResultadoInfija(resultado); 
         const resultadoPosfijo = PosfijaUtils.convertirAPosfija(operacion);
         setResultadoPosfija(resultadoPosfijo);
 
@@ -26,6 +29,9 @@ export const InputOperaciones = () => {
                     value={operacion}
                     onChange={(e) => setOperacion(e.target.value)}
                 />
+                <label>Resultado de la operacion infija: <span>
+                        {resultadoInfija !== null ? `${resultadoInfija}` : ''}
+                    </span></label>
             </article>
             <button className="operaciones-button" id="selected" onClick={manejarIngreso}>
                 Ingresar

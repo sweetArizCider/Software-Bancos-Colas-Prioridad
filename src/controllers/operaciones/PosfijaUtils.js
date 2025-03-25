@@ -44,6 +44,8 @@ export class PosfijaUtils {
         return resultado.join(' ');
     }
 
+    
+
     static evaluarPosfija(expresionPosfija) {
         const pila = new ListaEnlazada();
         const tokens = expresionPosfija.split(' ');
